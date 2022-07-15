@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const connect = () => {
     return mongoose.connect(
         "mongodb+srv://ajaymessanger:ajaymessanger@cluster0.bjjpj.mongodb.net/?retryWrites=true&w=majority"
-        
+        // "mongodb://localhost:27017/messanger"
     )
 }
 module.exports = connect;
