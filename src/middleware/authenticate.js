@@ -27,7 +27,7 @@ const authenticate = async (req, res, next) => {
 
 const verifyToken = (token) => {
     return new Promise((res, rej) => {
-        jwt.verify(token, process.env.JWT_SECRET_KEY, function (err, user) {
+        jwt.verify(token, `${process.env.JWT_SECRET_KEY}`, function (err, user) {
             if(err) return rej();
             return res(user);
         })
