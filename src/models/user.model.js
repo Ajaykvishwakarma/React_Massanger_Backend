@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema(
         avatar: {
             type: String, 
             required: true,
-            default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbqIQzxuWNieQfyP_k7MgZScr2H2RrDlHZX0nlhh2B5sxPunjMOtMOvyLtcKz5heABjts&usqp=CAU"
+            default: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
         },
         isAdmin: {
             type: Boolean,
