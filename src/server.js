@@ -31,8 +31,7 @@ const io = socket(server, {
     pingTimeout: 6000,
     cors: {
       "Access-Control-Allow-Origin": "*",
-      origin: "http://localhost:3000",
-      // credentials: true,
+      origin: "https://mateed-a15v.vercel.app",
     },
   });
 
