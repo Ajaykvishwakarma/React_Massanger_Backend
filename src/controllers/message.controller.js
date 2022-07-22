@@ -18,6 +18,16 @@ router.get('/:chatId', authenticate, async (req, res) => {
     }
 });
 
+router.delete("/:id", authenticate, async (req, res) => {
+    try {
+      const messages = await Message.findByIdAndDelete(req.params.id).lean().exec();
+  
+      res.status(200).send(messages);
+    } catch (error) {
+      return res.status(500).send(error.message);
+    }
+  });
+
 
 router.post('/', authenticate, async (req, res) => {
     const { content, chatId} = req.body;
